@@ -4,7 +4,7 @@ class Pelota {
     this.posY = random(50, 70);
     this.velX = random(-1, 1);
     this.velY = 0;
-    this.acelY = 0.98;
+    this.acelY = random(0.5, 0.98);
 
     this.diam = int(random(10, 50));
     this.rad = this.diam / 2;
@@ -23,11 +23,12 @@ class Pelota {
     } else {
       this.velY *= -1;
       this.posY += this.velY;
-      this.c = color(random(50, 200), 50, 255);
       this.diam = random(10, 50);
       if (this.esRectangulo == false) {
+        this.c = color(random(50, 200), 50, 255);
         this.esRectangulo = true;
       } else {
+        this.c = color(255, random(50, 200), 50);
         this.esRectangulo = false;
       }
     }

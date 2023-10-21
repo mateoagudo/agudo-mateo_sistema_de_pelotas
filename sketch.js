@@ -2,7 +2,11 @@ pelotas = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  print(pelotas);
+  for (let i = 0; i < 50; i++) {
+    pelota = new Pelota();
+    pelotas.push(pelota);
+  }
+  //print(pelotas);
 }
 
 function draw() {
@@ -11,8 +15,4 @@ function draw() {
     pelotas[i].update(windowHeight);
     pelotas[i].display();
   }
-}
-function mousePressed() {
-  pelota = new Pelota();
-  pelotas.push(pelota);
 }
