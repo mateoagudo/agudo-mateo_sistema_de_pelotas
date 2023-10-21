@@ -2,7 +2,7 @@ pelotas = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 75; i++) {
     pelota = new Pelota();
     pelotas.push(pelota);
   }
